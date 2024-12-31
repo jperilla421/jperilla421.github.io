@@ -123,6 +123,15 @@ main {
     border-radius: 1%; /* Bordes redondeados */
 }
 
+/* Estilo para manejar enlaces largos en la sección de créditos */
+main a {
+    word-wrap: break-word; /* Divide palabras largas automáticamente */
+    overflow-wrap: break-word; /* Alternativa para navegadores modernos */
+    display: inline-block; /* Mantiene los enlaces dentro del contenedor */
+    max-width: 100%; /* Limita el ancho del enlace al del contenedor */
+    white-space: normal; /* Permite que los enlaces ocupen varias líneas */
+}
+
 /* Justificar texto */
 main p {
     text-align: justify; /* Texto justificado */
