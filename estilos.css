@@ -1,0 +1,289 @@
+/* General */
+/* Importar fuentes */
+@font-face {
+    font-family: 'AncizarSans';
+    src: url('fonts/AncizarSans-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    /* Fuente regular utilizada para el texto general del sitio */
+}
+
+@font-face {
+    font-family: 'AncizarSans';
+    src: url('fonts/AncizarSans-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    /* Fuente en negrita utilizada para títulos y encabezados destacados */
+}
+
+@font-face {
+    font-family: 'AncizarSans';
+    src: url('fonts/AncizarSans-Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+    /* Fuente en itálica utilizada para énfasis y estilos diferenciados */
+}
+
+body {
+    font-family: 'AncizarSans', Arial, sans-serif; /* Fuente principal */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina relleno */
+    line-height: 1.6; /* Altura entre líneas */
+    background-color: #f4f4f4; /* Color de fondo */
+    color: #333; /* Color del texto */
+}
+
+/* Encabezado */
+header {
+    background-image: url('img/viaducto_header.jpg'); /* Fondo del encabezado */
+    background-size: cover; /* Escala para cubrir */
+    background-position: center; /* Centrado del fondo */
+    color: white; /* Texto blanco */
+    padding: 20px 0; /* Espaciado interno */
+    text-align: center; /* Centra contenido */
+    height: 200px; /* Altura fija */
+    display: flex; /* Contenedor flexible */
+    flex-direction: column; /* Orden vertical */
+    justify-content: center; /* Centrado vertical */
+    align-items: center; /* Centrado horizontal */
+}
+
+header h1 {
+    font-size: 2.5em; /* Tamaño del título */
+    color: white; /* Color principal del texto */
+    text-shadow: 
+        0 0 5px rgba(0, 0, 0, 0.8), /* Capa interna */
+        0 0 10px rgba(0, 0, 0, 0.6), /* Capa media */
+        0 0 15px rgba(0, 0, 0, 0.4); /* Capa externa */
+    margin: 0; /* Sin márgenes */
+    text-align: center; /* Centrado del texto */
+}
+
+header h1 a {
+    text-decoration: none !important; /* Sin subrayado */
+    color: inherit; /* Hereda el color del contenedor */
+    cursor: pointer; /* Cambia el puntero */
+}
+
+/* Subtítulos H3 */
+main h3 {
+    margin-left: 20px; /* Indentación a la izquierda */
+    color: #333; /* Texto oscuro */
+}
+
+/* Menú de navegación */
+/* Estilo para el contenedor del menú */
+.menunav {
+    display: flex;
+    flex-wrap: wrap; /* Ajuste automático para RWD */
+    justify-content: center; /* Centrado horizontal */
+    gap: 10px; /* Espaciado entre botones */
+    margin: 20px 0; /* Separación arriba y abajo */
+    padding: 0; /* Sin relleno */
+    list-style: none; /* Sin viñetas */
+}
+
+/* Estilo para los botones del menú */
+.botonMenu {
+    background-color: #0056b3; /* Fondo azul */
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1em; /* Tamaño del texto */
+    text-align: center; /* Centrado del texto */
+    transition: background-color 0.3s ease; /* Animación suave */
+    display: inline-block; /* Comportamiento de botón */
+}
+
+/* Cambio de color al pasar el ratón */
+.botonMenu:hover {
+    background-color: #004494; /* Fondo más oscuro */
+}
+
+/* Adaptación para la página activa */
+.botonMenu.active {
+    background-color: orange; /* Fondo resaltado */
+    color: white; /* Texto blanco */
+}
+
+/* Página activa en el menú */
+nav ul li a.active {
+    background-color: orange; /* Resalta página actual */
+    color: white; /* Contraste con texto */
+}
+
+/* Sección principal */
+main {
+    padding: 20px; /* Espaciado interno */
+    max-width: 1000px; /* Ancho máximo */
+    margin: auto; /* Centra horizontalmente */
+    background-color: white; /* Fondo blanco */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    border-radius: 1%; /* Bordes redondeados */
+}
+
+/* Justificar texto */
+main p {
+    text-align: justify; /* Texto justificado */
+}
+
+/* Imágenes centradas */
+figure {
+    margin: 20px 0; /* Separación arriba y abajo */
+    text-align: center; /* Centra contenido */
+}
+
+figure img {
+    max-width: 100%; /* Escala según contenedor */
+    height: auto; /* Mantiene proporciones */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+figure figcaption {
+    margin-top: 10px; /* Espaciado superior */
+    font-size: 0.9em; /* Tamaño de texto reducido */
+}
+
+/* Imágenes con texto flotante */
+.image-container {
+    float: left;
+    margin-right: 5%;
+    margin-bottom: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+    border-radius: 5px; /* Opcional, para bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+}
+
+.image-container figcaption {
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/* Videos */
+.video-container {
+    float: right;
+    width: 50%;
+    margin-left: 20px;
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+}
+
+.video-container figcaption {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+/* Audios */
+.audio-container {
+    float: left;
+    width: 300px;
+    margin-right: 20px;
+}
+
+.audio-container audio {
+    width: 100%;
+    display: block;
+}
+
+.audio-container figcaption {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Listas */
+ul {
+    margin: 20px 0; /* Espaciado superior e inferior */
+    padding-left: 20px; /* Relleno izquierdo */
+}
+
+ul li {
+    margin-bottom: 10px; /* Separación entre elementos */
+}
+
+/* Pie de página */
+footer {
+    text-align: center; /* Centrado del texto */
+    padding: 10px 0; /* Espaciado interno */
+    background-color: #007bff; /* Fondo azul */
+    color: white; /* Texto blanco */
+    font-size: 0.9em; /* Texto reducido */
+}
+
+/* Enlaces */
+a {
+    color: #007bff; /* Azul estándar para enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayado al pasar */
+}
+
+}
+
+a:visited {    
+	color: #FFFFFF;
+}
+
+footer .ir-arriba {
+    display: inline-block;
+    margin-top: 0.5em;
+    text-decoration: none;
+    color: #FFFFFF; /* Color azul */
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+footer .ir-arriba:hover {
+    color: #0056b3; /* Un azul más oscuro al pasar el cursor */
+}
+
+/* Estilo para la tabla de cantidades de obra */
+.table-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+.obra-table {
+    margin: 0 auto;
+    width: 50%;
+    border-collapse: collapse; /* Combina bordes */
+    margin: 20px 0; /* Separación superior e inferior */
+    font-size: 1em; /* Tamaño del texto */
+    text-align: center; /* Alineación del texto */
+    background-color: #f9f9f9; /* Fondo claro */
+    border: 1px solid #ddd; /* Bordes de tabla */
+}
+
+.obra-table th, .obra-table td {
+    padding: 12px; /* Espaciado interno */
+    border: 1px solid #ddd; /* Bordes de las celdas */
+}
+
+.obra-table th {
+    background-color: #007bff; /* Fondo azul */
+    color: white; /* Texto blanco */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Centrado */
+}
+
+.obra-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color alterno para filas pares */
+}
+
+.obra-table tbody tr:hover {
+    background-color: #e9ecef; /* Fondo al pasar el cursor */
+}
+
