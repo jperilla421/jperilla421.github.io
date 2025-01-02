@@ -1,0 +1,435 @@
+/* Fuentes personalizadas para el sitio */
+@font-face {
+    font-family: 'AncizarSans';
+    src: url('fonts/AncizarSans-Regular.otf') format('opentype'); /* Fuente regular */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AncizarSans';
+    src: url('fonts/AncizarSans-Bold.otf') format('opentype'); /* Fuente en negrita */
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AncizarSans';
+    src: url('fonts/AncizarSans-Italic.otf') format('opentype'); /* Fuente en cursiva */
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Estilo global para todo el sitio */
+body {
+    font-family: 'AncizarSans', Arial, sans-serif; /* Fuentes principales y opciones*/
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 0; /* Elimina rellenos predeterminados */
+    line-height: 1.6; /* Mejora la legibilidad */
+    background-color: #f4f4f4; /* Color de fondo neutro */
+    color: #333333; /* Color del texto principal */
+}
+
+/* Encabezado principal */
+header {
+    background-image: url('img/viaducto_header.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el encabezado */
+    background-position: center; 
+    color: white; /* Texto blanco para contraste */
+    padding: 20px 0; /* Espaciado superior e inferior */
+    text-align: center; /* Centrado horizontal del contenido */
+    height: 150px; /* Altura fija del encabezado */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+header h1 {
+    font-size: 2.5em; /* Tamaño del título principal */
+    color: white; /* Color del texto */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 0, 0, 0.4); /* Sombra para mejor visibilidad */
+    margin: 0; /* Sin márgenes */
+    text-align: center; /* Centrado del texto */
+}
+
+header h1 a {
+    text-decoration: none !important; /* Elimina el subrayado */
+    color: inherit; /* Hereda el color */
+    cursor: pointer; /* Cambia el cursor al pasar */
+}
+
+/* Subtítulos en la sección principal */
+main h3 {
+    margin-left: 20px; 
+    color: #333333; /* Mantener convención de color para subtítulos */
+}
+
+/* Menú de navegación principal */
+.menunav {
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; /* Espaciado entre botones */
+    list-style: none; /* Sin viñetas */
+    padding: 0; 
+    margin: 20px 0;
+}
+
+/* Estilo para los elementos <li> del menú */
+.menunav > li {
+    position: relative; /* Posicionar los submenús relacionados */
+}
+
+/* Estilo para los enlaces (<a>) directamente dentro de los <li> */
+.menunav > li > a {
+    background-color: #0056b3; /* Fondo azul estándar */
+    color: white; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    display: block; /* Hace clic en todo el área */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Estilo para el enlace activo en el menú */
+.menunav > li > a.active {
+    background-color: orange; /* Fondo para la ventana activa */
+    color: white; /* Texto blanco */
+    pointer-events: none; /* Desactiva el clic */
+}
+
+/* Efecto al pasar el mouse sobre los enlaces */
+.menunav > li > a:hover {
+    background-color: #004494; /* Cambia a un tono más oscuro al pasar */
+}
+
+/* Estilo para los submenús (<ul>) dentro de los <li> */
+.menunav > li > ul {
+    display: none; /* Oculta el submenú */
+    position: absolute; /* Posición relativa al elemento anterior */
+    background-color: white; /* Fondo blanco */
+    list-style: none; /* Sin viñetas */
+    padding: 10px 0; 
+    margin: 0; 
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    z-index: 10; /* Asegura que se superponga correctamente */
+}
+
+/* Estilo para los enlaces (<a>) dentro de los elementos del submenú */
+.menunav > li > ul > li > a {
+    padding: 10px 15px; 
+    text-decoration: none; /* Sin subrayado */
+    color: #333333; /* Texto oscuro */
+    display: block; /* Hace clic en todo el área */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Efecto al pasar el mouse sobre los enlaces del submenú */
+.menunav > li > ul > li > a:hover {
+    background-color: #f1f1f1; /*  Fondo gris claro para destacar */
+}
+
+/* Muestra el submenú cuando el mouse pasa sobre el <li> */
+.menunav > li:hover > ul {
+    display: block;
+}
+
+/* Ocultar checkbox por defecto para el menú desplegable */
+.hidden {
+    display: none;
+}
+
+/* Botón para el menú */
+#menuButton {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijado en la pantalla */
+    top: 5px;
+    left: 5px;
+    background-color: #003166; /* Fondo azul oscuro */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1100; /* Superposición sobre otros elementos */
+}
+
+/* Efecto al pasar el mouse sobre el botón de menú */
+#menuButton:hover {
+    background-color: #004494; /* Fondo azul ligeramente más claro */
+}
+
+/* Contenido principal */
+main {
+    padding: 20px; /* Espaciado interno */
+    max-width: 1000px; /* Ancho máximo para pantallas grandes */
+    margin: auto; /* Centra el contenido */
+    background-color: white; /* Fondo blanco */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    border-radius: 5px; /* Bordes redondeados ligeramente */
+}
+
+main p {
+    text-align: justify; /* Justifica el texto */
+}
+
+main a {
+    word-wrap: break-word; /* Divide palabras largas */
+    overflow-wrap: break-word; /* Alternativa moderna */
+    display: inline-block; /* Asegura que respete el contenedor */
+    max-width: 100%; /* Limita el ancho */
+    white-space: normal; /* Permite saltos de línea */
+}
+
+/* Estilo para imágenes */
+figure {
+    margin: 20px 0; /* Espaciado superior e inferior */
+    text-align: center; /* Centra el contenido */
+}
+
+figure img {
+    max-width: 100%; /* Escala la imagen según el contenedor */
+    height: auto; /* Mantiene proporciones */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+figure figcaption {
+    text-align: center; /* Centra el texto de referencias de las imágenes*/
+    margin-top: 10px; /* Espaciado superior */
+}
+
+/* Clase para imágenes con texto flotante */
+.image-container {
+    float: left; /* Flota a la izquierda */
+    margin-right: 5%;
+    margin-bottom: 10px;
+    width: 22%; /* Ocupa el 22% del contenedor */
+}
+
+.image-container img {
+    width:  100%; /* Escala al ancho del contenedor */
+    display: block; /* Quita espacios adicionales */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Estilo para videos flotando a la derecha */
+.video-container {
+    float: right; /* Flota a la derecha */
+    width: 50%; /* Ocupa la mitad del contenedor */
+    margin-left: 20px; /* Margen izquierdo */
+}
+
+.video-container video {
+    width: 100%; /* Escala el video al contenedor */
+    display: block; /* Quita espacios adicionales */
+}
+
+/* Estilo para audios */
+.audio-container {
+    float: left; /* Flota a la izquierda */
+    width: 300px; /* Ancho fijo */
+    margin-right: 20px; /* Margen derecho */
+}
+
+.audio-container audio {
+    width: 100%; /* Escala al ancho del contenedor */
+    display: block; /* Quita espacios adicionales */
+}
+
+.video-container figcaption, .audio-container figcaption, .image-container figcaption {
+        text-align: center; /* Centra el texto */
+        margin-top: 10px; /* Espaciado superior */    }
+
+/* Listas */
+ul {
+    margin: 20px 0; /* Margen superior e inferior */
+    padding-left: 20px; /* Relleno izquierdo */
+}
+
+ul li {
+    margin-bottom: 10px; /* Espaciado entre elementos */
+}
+
+/* Tablas */
+.table-container {
+    display: flex; /* Usa un contenedor flexible */
+    justify-content: center; /* Centra la tabla horizontalmente */
+    width: 100%; /* Asegura que use todo el espacio disponible */
+}
+
+/* Formato para tablas de cantidades de obra */
+.obra-table {
+    margin: 0 auto; /* Centra la tabla */
+    width: 50%; /* Ancho relativo */
+    border-collapse: collapse; /* Combina bordes adyacentes */
+    margin: 20px 0; 
+    text-align: center; /* Centra el texto en celdas */
+    background-color: #f9f9f9; /* Fondo claro */
+    border: 1px solid #ddd; /* Bordes ligeros */
+}
+
+/* Formato celdas */
+.obra-table th, .obra-table td {
+    padding: 12px; /* Espaciado interno */
+    border: 1px solid #ddd; /* Bordes */
+}
+
+/* Formato encabezados de tabla */
+.obra-table th {
+    background-color: #007bff; /* Fondo azul */
+    color: white; /* Texto blanco */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.obra-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color alterno para filas pares */
+}
+
+.obra-table tbody tr:hover {
+    background-color: #e9ecef; /* Fondo al pasar el cursor */
+}
+
+/* Pie de página */
+footer {
+    text-align: center; /* Centra el texto */
+    padding: 10px 0; /* Espaciado interno */
+    background-color: #007bff; /* Fondo azul */
+    color: white; /* Texto blanco */
+    font-size: 0.9em; /* Tamaño de texto reducido */
+}
+
+/* Navegación interna de volver arriba */
+footer .ir-arriba {
+    display: inline-block; /* Asegura que se comporte como un bloque en línea */
+    margin-top: 0.5em; /* Espaciado superior */
+    text-decoration: none; /* Sin subrayado */
+    color: #FFFFFF; /* Color blanco */
+    transition: color 0.3s ease; /* Transición suave en el color */
+}
+
+footer .ir-arriba:hover {
+    color: #0056b3; /* Cambia a azul más oscuro al pasar */
+}
+
+/* Enlaces */
+a {
+    color: #007bff; /* Color azul para enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+a:hover {
+    text-decoration: underline; /* Añade subrayado al pasar */
+}
+
+/* ------------------------------------------------------------------- */
+/* Estilos para pantallas entre 800px y 1200px */
+@media (max-width: 1200px) and (min-width: 800px) {
+    header {
+        height: 200px; /* Altura fija del encabezado más amplia para los 6 botones */
+    }
+    header h1 {
+        margin-top: 50px; /* Añade espacio superior para mover el h1 hacia abajo */
+    }
+    .menunav {
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+        justify-content: space-evenly; /* Distribuye uniformemente los botones */
+    }
+
+    .menunav > li {
+        flex: 1 1 calc(33.333% - 10px); /* Tres botones por fila */
+    }
+}
+
+/* ------------------------------------------------------------------- */
+/* Estilos para pantallas menores de 800px */
+/* Estilos para pantallas pequeñas (menos de 800px) */
+@media (max-width: 800px) { 
+    /* Visibilidad de botón de menú */
+    #menuButton {
+        display: block;
+    }
+    /* Menu flotante verticalmente */
+    .menunav {
+        display: flex;
+        flex-direction: column; /* Menú vertical */
+        position: fixed; /* Menú flotante */
+        top: 0; /* Posición fija en la parte superior */
+        left: 0; /* Alineado a la izquierda */
+        background-color: rgba(155, 155, 155, 0.8); /* Fondo gris con opacidad */
+        width: 50%; /* Ancho fijo del menú */
+        height: auto; /* Altura dinámica según el contenido */
+        box-shadow: 3px 0 5px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+        padding: 10px; /* Espaciado interno del menú */
+        gap: 15px; /* Mayor espaciado entre elementos */
+    }
+    
+    /* Cambio de formato submenús */
+    .menunav > li > ul {
+        position: absolute; /* Submenú alineado respecto al padre */
+        top: 0; /* Misma altura que el elemento padre */
+        left: 100%; /* Desplazado a la derecha del menú principal */
+        background-color: white; /* Fondo blanco */
+        width: 200px; /* Ancho del submenú */
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+        border-radius: 0; /* Sin bordes redondeados */
+    }
+
+    .menunav > li:hover > ul {
+        display: block; /* Muestra el submenú al pasar */
+    }
+
+    .menunav > li > ul > li > a {
+        padding: 10px; /* Espaciado interno */
+        text-align: left; /* Alinea texto a la izquierda */
+    }
+    
+    .menunav {
+        display: none;
+    }
+    
+    #menuToggle:checked ~ nav .menunav {
+        display: flex;
+    }
+    
+    /* Videos, imágenes y audios ocupan todo el ancho */
+    .video-container {
+        float: none; /* Elimina el flotado */
+        width: 100%; /* Ocupa todo el ancho */
+        margin: 0 auto; /* Centra el elemento */
+        display: block;
+    }
+    
+    .image-container {
+        float: none; /* Elimina el flotado */
+        width: 80%; /* Ocupa todo el ancho */
+        margin: 0 auto; /* Centra el elemento */
+        display: block;
+    }
+    
+    .video-container video, 
+    .image-container img {
+        width: 100%; /* Escala al ancho completo */
+        height: auto; /* Mantiene proporciones */
+        display: block; /* Quita espacio adicional */
+    }
+    
+    .audio-container {
+        float: none; /* No flota a la izquierda */
+        width: 80%; /* Permite que el contenedor se ajuste al contenido */
+        margin: 0 auto; /* Centra el contenedor si es necesario */
+    }
+
+    .audio-container audio {
+        display: block; /* Asegúrate de que el elemento audio se muestre */
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    }
+
+    main p {
+        text-align: justify; /* Justifica el texto */
+        margin-bottom: 1em; /* Añade espacio entre párrafos */
+    }
+}
